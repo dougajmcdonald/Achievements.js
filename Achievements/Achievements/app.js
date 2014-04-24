@@ -9,11 +9,19 @@
                     eventName: "click",
                     elementSelector: "div1"
                 })
+            }),
+            new Achievements.Achievement({
+                name: "Click on div2",
+                description: "This is the content of a totally different achievement, congratulations on doing things!",
+                event: new Achievements.AchievmentEvent({
+                    eventName: "mouseover",
+                    elementSelector: "div2"
+                })
             })
         ];
 
         var template = new Achievements.LayoutTemplate({
-            template: "<div><p>SOmething</p><p>more something</p></div>",
+            template: "<div><p class='achieveTitle'>Achievement Title</p><p class='achieveBody'>Congratulations, you've done a thing! well done!</p></div>",
             containerClass: "defaultTemplate"
         });
 
